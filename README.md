@@ -17,20 +17,26 @@ An Alexa skill made for controlling any network controlled devices using payload
 	![Set Role NAme](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Set+role+name.png "AWS Set Role Name")
      
 2. AWS IOT Device Setup
-	   ![AWS Create IOT Device]( "AWS Create IOT Device")
-	   
+
+	1. Lambda Virtual `device` 
+	
+	
+	2. Client Device
+	
+	Make sure to download your public and private keys to some place secure. You will not be able to re-download these.
+	
 3. Bridge Set Up
 
 	Clone this repo and install dependencies
 	```bash
 	git clone https://github.com/thehappydinoa/alexa-smart-home-skill
-	cd alexa-smart-home-skill
+	cd alexa-smart-home-skill/bridge
 	pip install -r requirements.txt
 	```
 
 	Copy in the .cert.pem and .private.key files made in step 2
 
-	Edit `host` in `lambda-handler.py` to match your IOT MQTT Server made in step 2
+	Edit `host` in `lambda-client.py` to match your IOT MQTT Server made in step 2
 	```bash
 	nano lambda-handler.py
 	```
