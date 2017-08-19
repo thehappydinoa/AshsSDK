@@ -9,8 +9,10 @@ An Alexa skill made for controlling any network controlled devices using payload
 
 ## How to
  1. Create an [AWS Role in IAM](https://console.aws.amazon.com/iam/homet) called mqtt_handler with access to Lambda.
-        ![Create Role](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Create+new+Role.png "AWS Create Role")
-        ![Select Role Type](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Select+Role+Type.png "AWS Select Role Type")
+        [Create Role](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Create+new+Role.png "AWS Create Role")
+        [Select Role Type](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Select+Role+Type.png "AWS Select Role Type")
+	![Attach Policy](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Attach+Policy.png "AWS Attach Policy)
+	![Set Role NAme](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Set+role+name.png)
      
 2. IOT Device Setup
 	   ![AWS Create IOT Device]( "AWS Create IOT Device")
