@@ -22,10 +22,23 @@ An Alexa skill made for controlling any network controlled devices using payload
 		Create an [AWS IOT Thing](https://console.aws.amazon.com/iotv2/home#/thinghub)
 		![Create Thing](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing.png "AWS Create IOT Thing")
 		![Create Thing Lambda](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda.png "Lambda")
-	
+		![[Create Thing Lambda](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda_pt2.png)
+		![Create Certificates Lambda](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda_certificates.png)
+		![Certificates Created](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda_certificates_created.png)
+		#### Download these as `lambda.cert.pem, lambda.public.key, lambda.private.key`
 	2. Client Device
+		Create an [AWS IOT Thing](https://console.aws.amazon.com/iotv2/home#/thinghub)
+		![Create Thing](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_client.png "AWS Create IOT Thing")
+		![Create Thing Client](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_client_pt2.png "Client")
+		![[Create Thing Client](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_client_pt3.png "Client")
+		![Certificates Created](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda_certificates_created.png "Client")
+		#### Download these as `client.cert.pem, client.public.key, client.private.key`
+	3. Get MQTT Server Hostname
+		Go to [Settings](https://console.aws.amazon.com/iotv2/home#/settings)
+		Note down the Endpoint
+		It should look like: xxxxxxxxxxxxxx.iot.us-east-1.amazonaws.com
 	
-	Make sure to download your public and private keys to some place secure. You will not be able to re-download these.
+	#### Note: Make sure to download your public and private keys to some place secure. You will not be able to re-download these.
 	
 3. Bridge Set Up
 
