@@ -21,38 +21,37 @@ An Alexa skill made for controlling any network controlled devices using payload
 	   
 3. Bridge Set Up
 
-Clone this repo and install dependencies
-```bash
-git clone https://github.com/thehappydinoa/alexa-smart-home-skill
-cd alexa-smart-home-skill
-pip install -r requirements.txt
-```
+	Clone this repo and install dependencies
+	```bash
+	git clone https://github.com/thehappydinoa/alexa-smart-home-skill
+	cd alexa-smart-home-skill
+	pip install -r requirements.txt
+	```
 
-Copy in the .cert.pem and .private.key files made in step 2
+	Copy in the .cert.pem and .private.key files made in step 2
 
-Edit `host` in `lambda-handler.py` to match your IOT MQTT Server made in step 2
-```bash
-nano lambda-handler.py
-```
+	Edit `host` in `lambda-handler.py` to match your IOT MQTT Server made in step 2
+	```bash
+	nano lambda-handler.py
+	```
 
-Zip Folder and upload to AWS
-```bash
-zip -r ../lambda-handler.zip *
-aws lambda create-function --function-name mqtt-handler --runtime python2.7 --role mqtt_handler --handler mqtt-handler.lambda_handler --zip-file "fileb://lambda-handler.zip"
-```
+	Zip Folder and upload to AWS
+	```bash
+	zip -r ../lambda-handler.zip *
+	```
 
 4. Create Alexa Skill
-Create or login to an [Amazon Developer account](https://developer.amazon.com).  In the Developer Console:
+	Create or login to an [Amazon Developer account](https://developer.amazon.com).  In the Developer Console:
 
-	1. [Create an Smart Home Payload V3 Alexa Skill](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function) named AQUOS.
+	[Create an Smart Home Payload V3 Alexa Skill](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function) named AQUOS.
       ![alt text](https://s3.amazonaws.com/lantern-public-assets/audio-player-assets/prod-skill-info.png "Developer Portal Skill Information")
-	2. Copy the Lambda ARN from above.
+	Copy the Lambda ARN from above.
       ![alt text](https://s3.amazonaws.com/lantern-public-assets/audio-player-assets/prod-configuration.png "Developer Portal Configuration")
 
 5. Configuring "Alexa Smart Home" as the "Trigger"
-Go to https://console.aws.amazon.com/lambda/home
-Select mqtt-handler
-Add Trigger "Alexa Smart Home with your Alexa Application Id
+	Go to https://console.aws.amazon.com/lambda/home
+	Select mqtt-handler function
+	Add Trigger "Alexa Smart Home with your Alexa Application Id
         ![alt text](https://s3.amazonaws.com/lantern-public-assets/audio-player-assets/aws-lambda-ask-trigger.PNG "AWS Lambda Trigger")
 
 ## Resources
