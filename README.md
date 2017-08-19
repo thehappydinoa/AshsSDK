@@ -8,9 +8,9 @@ An Alexa skill made for controlling any network controlled devices using payload
 * A Bridge (I used a [Raspberry Pi](https://www.raspberrypi.org/products/), but another computer running linux will work too)
 
 ## How to
- 1. Create an AWS Role in IAM called mqtt_handler with access to Lambda.
-        ![create_role_1](https://cloud.githubusercontent.com/assets/7671574/17451098/09f64f40-5b19-11e6-82ee-b82c98387052.png "AWS Create Role Screenshot 1")
-        ![create_role_2](https://cloud.githubusercontent.com/assets/7671574/17451100/0c3ef928-5b19-11e6-9aca-8cd353106396.png "AWS Create Role Screenshot 2")
+ 1. Create an [AWS Role in IAM](https://console.aws.amazon.com/iam/homet) called mqtt_handler with access to Lambda.
+        ![Create Role](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Create+new+Role.png "AWS Create Role")
+        ![Select Role Type](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Select+Role+Type.png "AWS Select Role Type")
      
 2. IOT Device Setup
 	   ![AWS Create IOT Device]( "AWS Create IOT Device")
