@@ -34,9 +34,9 @@ An Alexa skill made for controlling any network controlled devices using payload
 		![Certificates Created](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda_certificates_created.png "Client")
 		#### Download these as `client.cert.pem, client.public.key, client.private.key`
 	3. Get MQTT Server Hostname
-		Go to [Settings](https://console.aws.amazon.com/iotv2/home#/settings)
-		Note down the Endpoint
-		It should look like: xxxxxxxxxxxxxx.iot.us-east-1.amazonaws.com
+		* Go to [Settings](https://console.aws.amazon.com/iotv2/home#/settings)
+		* Note down the Endpoint
+		* It should look like: xxxxxxxxxxxxxx.iot.us-east-1.amazonaws.com
 	
 	#### Note: Make sure to download your public and private keys to some place secure. You will not be able to re-download these.
 	
