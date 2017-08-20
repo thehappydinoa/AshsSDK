@@ -5,12 +5,12 @@ An Alexa skill made for controlling any network controlled devices using payload
 * A [AWS account](https://aws.amazon.com/)
 * A [Amazon Developer account](https://developer.amazon.com)
 * An Alexa-enabled device such as [Amazon Echo](https://www.amazon.com/dp/B00X4WHP5E/) or [Amazon Echo Dot](https://www.amazon.com/dp/B01DFKC2SO/)
-* A Bridge (I used a [Raspberry Pi](https://www.raspberrypi.org/products/), but another computer running linux will work too)
+* A Bridge running [Python 2.7](https://www.python.org/downloads/) and [Pip](alexa-smart-home-skill/installing-pip.md)(I used a [Raspberry Pi](https://www.raspberrypi.org/products/), but another computer running linux will work too)
 
 ## How to
  1. AWS IAM Setup
  	
- 	Create an [AWS Role in IAM](https://console.aws.amazon.com/iam/homet) called mqtt_handler with access to Lambda.
+ 	### Create an [AWS Role in IAM](https://console.aws.amazon.com/iam/homet) called mqtt_handler with access to Lambda.
 	![Create Role](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Create+new+Role+Edit.png "AWS Create Role")
 	![Select Role Type](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Select+Role+Type+Edit.png "AWS Select Role Type")
 	![Attach Policy](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Attach+Policy.png "AWS Attach Policy")
@@ -19,7 +19,7 @@ An Alexa skill made for controlling any network controlled devices using payload
 2. AWS IOT Device Setup
 
 	1. Lambda Virtual `device` 
-		Create an [AWS IOT Thing](https://console.aws.amazon.com/iotv2/home#/thinghub)
+		### Create an [AWS IOT Thing](https://console.aws.amazon.com/iotv2/home#/thinghub)
 		![Create Thing](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing.png "AWS Create IOT Thing")
 		![Create Thing Lambda](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda.png "Lambda")
 		![[Create Thing Lambda](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda_pt2.png)
@@ -27,7 +27,7 @@ An Alexa skill made for controlling any network controlled devices using payload
 		![Certificates Created](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda_certificates_created.png)
 		#### Download these as `lambda.cert.pem, lambda.public.key, lambda.private.key`
 	2. Client Device
-		Create an [AWS IOT Thing](https://console.aws.amazon.com/iotv2/home#/thinghub)
+		### Create an [AWS IOT Thing](https://console.aws.amazon.com/iotv2/home#/thinghub)
 		![Create Thing](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_client.png "AWS Create IOT Thing")
 		![Create Thing Client](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_client_pt2.png "Client")
 		![Create Thing Client](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_client_pt3.png "Client")
@@ -43,36 +43,36 @@ An Alexa skill made for controlling any network controlled devices using payload
 	
 3. Bridge Set Up
 
-	Clone this repo and install dependencies
+	### Clone this repo and install dependencies
 	```bash
 	git clone https://github.com/thehappydinoa/alexa-smart-home-skill
 	cd alexa-smart-home-skill/bridge
 	pip install -r requirements.txt
 	```
 
-	Copy in the .cert.pem and .private.key files made in step 2
+	### Copy in the .cert.pem and .private.key files made in step 2
 
-	Edit `host` in `lambda-client.py` to match your IOT MQTT Server made in step 2
+	### Edit `host` in `lambda-client.py` to match your IOT MQTT Server made in step 2
 	```bash
 	nano lambda-handler.py
 	```
 
-	Zip Folder and upload to AWS
+	### Zip Folder and upload to AWS
 	```bash
 	zip -r ../lambda-handler.zip *
 	```
 
 4. Create Alexa Skill
 	
-	Create or login to an [Amazon Developer account](https://developer.amazon.com).  
+	### Create or login to an [Amazon Developer account](https://developer.amazon.com).  
 		In the Developer Console:
 	[Create an Smart Home Payload V3 Alexa Skill](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function) named MQTT.
       ![alt text](https://s3.amazonaws.com/lantern-public-assets/audio-player-assets/prod-skill-info.png "Developer Portal Skill Information")
-	Copy the Lambda ARN from above.
+	### Copy the Lambda ARN from above.
       ![alt text](https://s3.amazonaws.com/lantern-public-assets/audio-player-assets/prod-configuration.png "Developer Portal Configuration")
 
 5. Configuring "Alexa Smart Home" as the "Trigger"
-	Go to https://console.aws.amazon.com/lambda/home
+	### Go to https://console.aws.amazon.com/lambda/home
 	Select mqtt-handler function
 	Add Trigger "Alexa Smart Home with your Alexa Application Id
         ![alt text](https://s3.amazonaws.com/lantern-public-assets/audio-player-assets/aws-lambda-ask-trigger.PNG "AWS Lambda Trigger")
