@@ -63,8 +63,9 @@ An Alexa skill made for controlling any network controlled devices using payload
 	```
 
 4. Create Alexa Skill
-	Create or login to an [Amazon Developer account](https://developer.amazon.com).  In the Developer Console:
-
+	
+	Create or login to an [Amazon Developer account](https://developer.amazon.com).  
+		In the Developer Console:
 	[Create an Smart Home Payload V3 Alexa Skill](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function) named MQTT.
       ![alt text](https://s3.amazonaws.com/lantern-public-assets/audio-player-assets/prod-skill-info.png "Developer Portal Skill Information")
 	Copy the Lambda ARN from above.
