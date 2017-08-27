@@ -50,9 +50,9 @@ An Alexa skill made for controlling any network controlled devices using payload
 	pip install -r requirements.txt
 	```
 	
-	### Copy in the `lambda.cert.pem` and `lambda.private.key` files made in step 2 to the folder named `lambda`
+	### Copy `lambda.cert.pem` and `lambda.private.key` in to the folder named `lambda`
 	
-	### Copy in the `client.cert.pem` and `client.private.key` files made in step 2 to the folder named `client`
+	### Copy `client.cert.pem` and `client.private.key` in to the folder named `client`
 	
 	```bash
 	cd ..
