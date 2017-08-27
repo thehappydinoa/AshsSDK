@@ -58,9 +58,9 @@ An Alexa skill made for controlling any network controlled devices using payload
 	cd ..
 	python fileGenerator.py
 	```
-	### Upload `mqtt-handler.zip` to lambda
+4. Upload `mqtt-handler.zip` to lambda
 
-4. Create Alexa Skill
+5. Create Alexa Skill
 	
 	### Create or login to an [Amazon Developer account](https://developer.amazon.com).  
 		In the Developer Console:
@@ -69,7 +69,7 @@ An Alexa skill made for controlling any network controlled devices using payload
 	### Copy the Lambda ARN from above.
       ![alt text](https://s3.amazonaws.com/lantern-public-assets/audio-player-assets/prod-configuration.png "Developer Portal Configuration")
 
-5. Configuring "Alexa Smart Home" as the "Trigger"
+6. Configuring "Alexa Smart Home" as the "Trigger"
 	### Go to https://console.aws.amazon.com/lambda/home
 	Select mqtt-handler function
 	Add Trigger "Alexa Smart Home with your Alexa Application Id
