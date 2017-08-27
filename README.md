@@ -46,8 +46,8 @@ An Alexa skill made for controlling any network controlled devices using payload
 	### Clone this repo and install dependencies
 	```bash
 	git clone https://github.com/thehappydinoa/alexa-smart-home-skill
-	cd alexa-smart-home-skill/client
-	pip install -r requirements.txt
+	cd alexa-smart-home-skill/
+	pip install -r client/requirements.txt
 	```
 	
 	### Copy `lambda.cert.pem` and `lambda.private.key` in to the folder named `lambda`
