@@ -51,9 +51,9 @@ An Alexa skill made for controlling any network controlled devices using payload
 	pip install -r client/requirements.txt
 	```
 	
-	### Copy `lambda.cert.pem` and `lambda.private.key` in to the folder named `lambda`
+	#### Copy `lambda.cert.pem` and `lambda.private.key` in to the folder named `lambda`
 	
-	### Copy `client.cert.pem` and `client.private.key` in to the folder named `client`
+	#### Copy `client.cert.pem` and `client.private.key` in to the folder named `client`
 	
 	```bash
 	cd ..
@@ -61,20 +61,19 @@ An Alexa skill made for controlling any network controlled devices using payload
 	```
 4. Upload `mqtt-handler.zip` to lambda
 
+	### Create new function
+	![Create New Function](https://s3.amazonaws.com/alexa-smart-home-skill/Lambda+Management+Console+Create+Function.png "Create Function")
+	![Create from scratch](https://s3.amazonaws.com/alexa-smart-home-skill/Lambda+Management+Console+From+Scratch.png "Create from scratch")
+
 5. Create Alexa Skill
 	
 	### Create or login to an [Amazon Developer account](https://developer.amazon.com).  
-		In the Developer Console:
-	[Create an Smart Home Payload V3 Alexa Skill](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function) named MQTT.
+	In the Developer Console:
+	[Create an Smart Home Payload V3 Alexa Skill](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function) named `Alexa-MQTT-Skill`.
       ![alt text](https://s3.amazonaws.com/lantern-public-assets/audio-player-assets/prod-skill-info.png "Developer Portal Skill Information")
 	### Copy the Lambda ARN from above.
       ![alt text](https://s3.amazonaws.com/lantern-public-assets/audio-player-assets/prod-configuration.png "Developer Portal Configuration")
 
-6. Configuring "Alexa Smart Home" as the "Trigger"
-	### Go to https://console.aws.amazon.com/lambda/home
-	Select mqtt-handler function
-	Add Trigger "Alexa Smart Home with your Alexa Application Id
-        ![alt text](https://s3.amazonaws.com/lantern-public-assets/audio-player-assets/aws-lambda-ask-trigger.PNG "AWS Lambda Trigger")
 
 ## Resources
 * [aws-iot-device-sdk-python](https://github.com/aws/aws-iot-device-sdk-python)
