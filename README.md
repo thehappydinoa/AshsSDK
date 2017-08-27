@@ -46,21 +46,19 @@ An Alexa skill made for controlling any network controlled devices using payload
 	### Clone this repo and install dependencies
 	```bash
 	git clone https://github.com/thehappydinoa/alexa-smart-home-skill
-	cd alexa-smart-home-skill/bridge
+	cd alexa-smart-home-skill/client
 	pip install -r requirements.txt
 	```
-
-	### Copy in the .cert.pem and .private.key files made in step 2
-
-	### Edit `host` in `lambda-client.py` to match your IOT MQTT Server made in step 2
+	
+	### Copy in the `lambda.cert.pem` and `lambda.private.key` files made in step 2 to the folder named `lambda`
+	
+	### Copy in the `client.cert.pem` and `client.private.key` files made in step 2 to the folder named `client`
+	
 	```bash
-	nano lambda-handler.py
+	cd ..
+	python fileGenerator.py
 	```
-
-	### Zip Folder and upload to AWS
-	```bash
-	zip -r ../lambda-handler.zip *
-	```
+	### Upload `mqtt-handler.zip` to lambda
 
 4. Create Alexa Skill
 	
