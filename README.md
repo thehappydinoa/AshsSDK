@@ -6,6 +6,7 @@ An Alexa skill made for controlling any network controlled devices using payload
 * A [Amazon Developer account](https://developer.amazon.com)
 * An Alexa-enabled device such as [Amazon Echo](https://www.amazon.com/dp/B00X4WHP5E/) or [Amazon Echo Dot](https://www.amazon.com/dp/B01DFKC2SO/)
 * A Bridge running [Python 2.7](https://www.python.org/downloads/) and [Pip](/installing-pip.md) (I used a [Raspberry Pi](https://www.raspberrypi.org/products/), but another computer running linux will work too)
+* I recomend using [screen](/installing-screen.md) to run python headless
 
 ## How to
 1. AWS IAM Setup
