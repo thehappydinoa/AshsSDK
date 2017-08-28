@@ -71,7 +71,7 @@ An Alexa skill made for controlling any network controlled devices using payload
 	* Name the function `Alexa-MQTT-Skill`
 	* the runtime to `Python 2.7`
 	* Set Code entry type to `Upload a .ZIP file`
-	* Set Handler to mqtt-handler.lambda_handler
+	* Set Handler to `mqtt-handler.lambda_handler`
 	* Set Role to Existing Role `mqtt_handler`
 	
 	![Function Confirguration](https://s3.amazonaws.com/alexa-smart-home-skill/Lambda+Management+Console+Function+Config.png "Function Confirguration")
