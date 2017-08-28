@@ -69,26 +69,31 @@ An Alexa skill made for controlling any network controlled devices using payload
 	#### Skip adding a trigger until after the you create an Alexa Skill
 	#### Configure Function
 	* Name the function `Alexa-MQTT-Skill`
-	* Set the runtime to `Python 2.7`
+	* the runtime to `Python 2.7`
 	* Set Code entry type to `Upload a .ZIP file`
 	* Set Handler to mqtt-handler.lambda_handler
 	* Set Role to Existing Role `mqtt_handler`
+	
 	![Function Confirguration](https://s3.amazonaws.com/alexa-smart-home-skill/Lambda+Management+Console+Function+Config.png "Function Confirguration")
 	### Copy ARN
 	Should look like `arn:aws:lambda:us-east-1:xxxxxxxxxxx:function:Alexa-MQTT-Skill`
+	
 	![Get ARN](https://s3.amazonaws.com/alexa-smart-home-skill/Lambda+Management+Console+Get+ARN.png "Get ARN")
 
 5. Create Alexa Skill
 	
 	### Create or login to an [Amazon Developer account](https://developer.amazon.com/edw/home.html#/).  
 	In the Alexa Developer Console Select `Alexa Skills Kit`
+	
 	[Create an Alexa Skill](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function) 
 	* Set Skill Type to `Smart Home Skill API`
 	* Set Name to `Alexa-MQTT-Skill`
 	* Set Payload Version to `v3 (audio-visual devices)`
+	
 	![Skill Config](https://s3.amazonaws.com/alexa-smart-home-skill/Alexa+Skill+Info.png "Skill Config")
 	#### Copy the `ID:` 
 	Should look like `amzn1.ask.skill.xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
+	
 	![Copy ID](https://s3.amazonaws.com/alexa-smart-home-skill/Alexa+Skill+ID.png "Copy ID")
 	#### Go Back to the Lambda Dashboard
 	#### Add `Alexa Smart Home` as the Lambda Function Trigger
