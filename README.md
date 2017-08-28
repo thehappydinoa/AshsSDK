@@ -1,4 +1,4 @@
-# Alexa Smart Home Skill using Smart Home Payload V3
+# Alexa Smart Home Skill SDK 
 An Alexa skill made for controlling any network controlled devices using payload V3 (Entertainment Devices)
 
 ## Requirements 
