@@ -182,7 +182,6 @@ def responseBuilder(RESPONSE_TYPE, request):
 			}
 
 	elif RESPONSE_TYPE == "SPEAKER_SUCCESS":
-		volume = 50
 		if name == "AdjustVolume" or name == "SetVolume":
 			volume = payload['volume']
 		return {
