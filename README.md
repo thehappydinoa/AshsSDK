@@ -1,4 +1,4 @@
-# Alexa Smart Home Skill SDK 
+# Alexa Smart Home Skill SDK [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7018503e342543838744da9b91ae23d7)](https://www.codacy.com/app/thehappydinoa/alexa-smart-home-skill?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=thehappydinoa/alexa-smart-home-skill&amp;utm_campaign=Badge_Grade)
 An Alexa skill made for controlling any network controlled devices using payload V3 (Entertainment Devices)
 
 ## Requirements 
