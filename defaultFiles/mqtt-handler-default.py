@@ -1,7 +1,4 @@
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
-import sys
-import os
-import logging
 import time
 import json
 import urllib
@@ -21,7 +18,7 @@ endpoints = {
 			"description": "70in AQUOS Smart TV",
 			"displayCategories": [  ],
 			"cookie": {},
-			"capabilities": 
+			"capabilities":
 			[
 
 				{
@@ -60,10 +57,10 @@ ENDPOINT_UNREACHABLE = {
 		"payload": {
 		  "type": "ENDPOINT_UNREACHABLE",
 		  "message": "Endpoint Unreachable"
+		  }
 		}
 	}
-}
-	
+
 def lambda_handler(request, context):
 	namespace = request['directive']['header']['namespace']
 	if namespace == 'Alexa.Discovery':
@@ -74,7 +71,7 @@ def lambda_handler(request, context):
 def responseCallback(client, userdata, message):
 	global tempData
 	tempData = json.loads(message.payload)
-	
+
 def publish(topic,messageDict):
 	client = None
 	client = AWSIoTMQTTClient(clientId)
@@ -86,16 +83,16 @@ def publish(topic,messageDict):
 	client.configureDrainingFrequency(2)
 	client.configureConnectDisconnectTimeout(10)
 	client.configureMQTTOperationTimeout(5)
-	
+
 	client.connect()
 	client.publish(topic, json.dumps(messageDict), 0) #Replace test text with request
 	client.disconnect()
-	
+
 
 def publishAndWaitForResponse(request):
 	global tempData
 	tempData = json.dumps(ENDPOINT_UNREACHABLE)
-	
+
 	logger = logging.getLogger("AWSIoTPythonSDK.core")
 	#logger.setLevel(logging.DEBUG)
 	streamHandler = logging.StreamHandler()
@@ -113,7 +110,7 @@ def publishAndWaitForResponse(request):
 	client.configureDrainingFrequency(2)
 	client.configureConnectDisconnectTimeout(10)
 	client.configureMQTTOperationTimeout(5)
-	
+
 	client.connect()
 	client.subscribe("things/" + clientId + "/response", 1, responseCallback)
 	client.publish("things/" + clientId, json.dumps(request), 0) #Replace test text with request
