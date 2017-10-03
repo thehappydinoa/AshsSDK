@@ -1,7 +1,4 @@
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
-from threading import Thread
-import platform
-import sys
 import os
 import logging
 import time
@@ -110,7 +107,7 @@ def publishResponse(response):
 		client.publish(responseTopic,json.dumps(response),1)
 		print("Sent!")
 		print("| " + json.dumps(response))
-	except Exception as e:
+	except Exception:
 		print(color.FAIL + "| Error Publishing" + color.ENDC + color.OKBLUE)
 	print("/" + "=" * 44 + "/\n")
 	print(color.ENDC)
