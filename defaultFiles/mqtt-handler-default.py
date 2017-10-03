@@ -1,7 +1,6 @@
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
 import time
 import json
-import urllib
 
 host = "xxxxxxxxxxxxxx.iot.us-east-1.amazonaws.com"
 rootCAPath = "root-CA.crt"
