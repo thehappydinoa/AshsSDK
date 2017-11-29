@@ -1,5 +1,5 @@
 # [AshsSDK](https://thehappydinoa.github.io/alexa-smart-home-skill/) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7018503e342543838744da9b91ae23d7)](https://www.codacy.com/app/thehappydinoa/alexa-smart-home-skill?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=thehappydinoa/alexa-smart-home-skill&amp;utm_campaign=Badge_Grade) [![Join the chat at https://gitter.im/alexa-smart-home-skill/alexa-smart-home-skill](https://badges.gitter.im/alexa-smart-home-skill/alexa-smart-home-skill.svg)](https://gitter.im/alexa-smart-home-skill/alexa-smart-home-skill?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-An Alexa skill made for controlling any network controlled devices using payload V3 (Entertainment Devices)
+An Alexa Smart Home Skill SDK made for controlling any network controlled devices using payload V3 (Entertainment Devices)
 
 ## Requirements 
 * A [AWS account](https://aws.amazon.com/)
