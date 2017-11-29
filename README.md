@@ -1,4 +1,4 @@
-# [AshesSDK](https://thehappydinoa.github.io/alexa-smart-home-skill/) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7018503e342543838744da9b91ae23d7)](https://www.codacy.com/app/thehappydinoa/alexa-smart-home-skill?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=thehappydinoa/alexa-smart-home-skill&amp;utm_campaign=Badge_Grade) [![Join the chat at https://gitter.im/alexa-smart-home-skill/alexa-smart-home-skill](https://badges.gitter.im/alexa-smart-home-skill/alexa-smart-home-skill.svg)](https://gitter.im/alexa-smart-home-skill/alexa-smart-home-skill?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# [AshsSDK](https://thehappydinoa.github.io/alexa-smart-home-skill/) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7018503e342543838744da9b91ae23d7)](https://www.codacy.com/app/thehappydinoa/alexa-smart-home-skill?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=thehappydinoa/alexa-smart-home-skill&amp;utm_campaign=Badge_Grade) [![Join the chat at https://gitter.im/alexa-smart-home-skill/alexa-smart-home-skill](https://badges.gitter.im/alexa-smart-home-skill/alexa-smart-home-skill.svg)](https://gitter.im/alexa-smart-home-skill/alexa-smart-home-skill?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 An Alexa skill made for controlling any network controlled devices using payload V3 (Entertainment Devices)
 
 ## Requirements 
@@ -19,22 +19,26 @@ An Alexa skill made for controlling any network controlled devices using payload
      
 2. AWS IOT Device Setup
 
-1. Lambda Virtual `device` 
+- Lambda Virtual `device` 
 ### Create an [AWS IOT Thing](https://console.aws.amazon.com/iotv2/home#/thinghub)
 ![Create Thing](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing.png "AWS Create IOT Thing")
 ![Create Thing Lambda](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda.png "Lambda")
 ![Create Thing Lambda](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda_pt2.png)
 ![Create Certificates Lambda](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda_certificates.png)
 ![Certificates Created](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda_certificates_created.png)
+	
 #### Download these as `lambda.cert.pem, lambda.public.key, lambda.private.key`
-2. Client Device
+	
+- Client Device
 ### Create an [AWS IOT Thing](https://console.aws.amazon.com/iotv2/home#/thinghub)
 ![Create Thing](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_client.png "AWS Create IOT Thing")
 ![Create Thing Client](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_client_pt2.png "Client")
 ![Create Thing Client](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_client_pt3.png "Client")
 ![Create Certificates](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_client_certificates.png)
 ![Certificates Created](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda_certificates_created.png "Client")
+
 #### Download these as `client.cert.pem, client.public.key, client.private.key`
+
 3. Get MQTT Server Hostname
 * Go to [Settings](https://console.aws.amazon.com/iotv2/home#/settings)
 * Note down the Endpoint
@@ -46,8 +50,8 @@ An Alexa skill made for controlling any network controlled devices using payload
 
 ### Clone this repo and install dependencies
 ```bash
-git clone https://github.com/thehappydinoa/alexa-smart-home-skill
-cd alexa-smart-home-skill/
+git clone https://github.com/thehappydinoa/AshsSDK
+cd AshsSDK/
 pip install -r client/requirements.txt
 ```
 	
