@@ -1,7 +1,7 @@
 # [AshsSDK](https://thehappydinoa.github.io/alexa-smart-home-skill/) ![Python 2.7](https://img.shields.io/badge/Python-2.7-blue.svg) [![Join the chat at https://gitter.im/alexa-smart-home-skill/alexa-smart-home-skill](https://badges.gitter.im/alexa-smart-home-skill/alexa-smart-home-skill.svg)](https://gitter.im/alexa-smart-home-skill/alexa-smart-home-skill?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 An Alexa Smart Home Skill SDK made for controlling any network controlled devices using payload V3 (Entertainment Devices)
 
-## Requirements 
+## Requirements
 * A [AWS account](https://aws.amazon.com/)
 * A [Amazon Developer account](https://developer.amazon.com)
 * An Alexa-enabled device such as [Amazon Echo](https://www.amazon.com/dp/B00X4WHP5E/) or [Amazon Echo Dot](https://www.amazon.com/dp/B01DFKC2SO/)
@@ -16,10 +16,10 @@ An Alexa Smart Home Skill SDK made for controlling any network controlled device
 ![Select Role Type](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Select+Role+Type+Edit.png "AWS Select Role Type")
 ![Attach Policy](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Attach+Policy.png "AWS Attach Policy")
 ![Set Role NAme](https://s3.amazonaws.com/alexa-smart-home-skill/IAM+Management+Console+Set+role+name.png "AWS Set Role Name")
-     
+
 2. AWS IOT Device Setup
 
-- Lambda Virtual `device` 
+1. Lambda Virtual `device`
 ### Create an [AWS IOT Thing](https://console.aws.amazon.com/iotv2/home#/thinghub)
 ![Create Thing](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing.png "AWS Create IOT Thing")
 ![Create Thing Lambda](https://s3.amazonaws.com/alexa-smart-home-skill/AWS+IoT+Create+New+Thing_lambda.png "Lambda")
@@ -45,7 +45,7 @@ An Alexa Smart Home Skill SDK made for controlling any network controlled device
 * It should look like: xxxxxxxxxxxxxx.iot.us-east-1.amazonaws.com
 
 #### Note: Make sure to download your public and private keys to some place secure. You will not be able to re-download these.
-	
+
 3. Bridge Set Up
 
 ### Clone this repo and install dependencies
@@ -54,11 +54,11 @@ git clone https://github.com/thehappydinoa/AshsSDK
 cd AshsSDK/
 pip install -r client/requirements.txt
 ```
-	
+
 #### Copy `lambda.cert.pem` and `lambda.private.key` in to the folder named `lambda`
 
 #### Copy `client.cert.pem` and `client.private.key` in to the folder named `client`
-	
+
 ```bash
 cd ..
 python fileGenerator.py
@@ -78,34 +78,34 @@ python fileGenerator.py
 * Set Code entry type to `Upload a .ZIP file`
 * Set Handler to `mqtt-handler.lambda_handler`
 * Set Role to Existing Role `mqtt_handler`
-	
+
 ![Function Confirguration](https://s3.amazonaws.com/alexa-smart-home-skill/Lambda+Management+Console+Function+Config.png "Function Confirguration")
 ### Copy ARN
 Should look like `arn:aws:lambda:us-east-1:xxxxxxxxxxx:function:Alexa-MQTT-Skill`
-	
+
 ![Get ARN](https://s3.amazonaws.com/alexa-smart-home-skill/Lambda+Management+Console+Get+ARN.png "Get ARN")
 
 5. Create Alexa Skill
-	
+
 ### Create or login to an [Amazon Developer account](https://developer.amazon.com/edw/home.html#/).  
 In the Alexa Developer Console Select `Alexa Skills Kit`
-	
-[Create an Alexa Skill](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function) 
+
+[Create an Alexa Skill](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function)
 * Set Skill Type to `Smart Home Skill API`
 * Set Name to `Alexa-MQTT-Skill`
 * Set Payload Version to `v3 (audio-visual devices)`
-	
+
 ![Skill Config](https://s3.amazonaws.com/alexa-smart-home-skill/Alexa+Skill+Info.png "Skill Config")
-#### Copy the `ID:` 
+#### Copy the `ID:`
 Should look like `amzn1.ask.skill.xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
-	
+
 ![Copy ID](https://s3.amazonaws.com/alexa-smart-home-skill/Alexa+Skill+ID.png "Copy ID")
 #### Go Back to the Lambda Dashboard
 #### Add `Alexa Smart Home` as the Lambda Function Trigger
 Paste in the ID
 ![Alexa Smart Home as Lambda Trigger](https://s3.amazonaws.com/alexa-smart-home-skill/Set+Trigger+Lambda+Function.png "Alexa Smart Home as Lambda Trigger")
 
-## You Now should be able to interact with your Skill 
+## You Now should be able to interact with your Skill
 Try saying `Alexa, Turn on Device1`
 
 ## Resources

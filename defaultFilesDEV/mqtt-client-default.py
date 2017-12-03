@@ -28,13 +28,71 @@ class color:
     LOGGING = '\33[34m'
 
 
+class devices(object):
+    def __init__(self):
+        self.endpoints = {
+            "endpoints": []
+        }
+
+    def _return(self):
+        return self.endpoints
+
+    def add(self, device):
+        self.endpoints["endpoints"].append(device.getDict)
+
+
+class device(object):
+    endpointId = ""
+    manufacturerName = ""
+    friendlyName = ""
+    description = ""
+    capabilities = []
+
+    def __init__(self, endpointId, manufacturerName, friendlyName, description, capabilities):
+        self.endpointId = endpointId
+        self.manufacturerName = manufacturerName
+        self.friendlyName = friendlyName
+        self.description = description
+        if type(capabilities) is list:
+            self.capabilities = capabilities
+        else:
+            raise ValueError('Capabilities must be a list')
+
+    def getDict(self):
+        return {
+            "endpointId": str(self.endpointId),
+            "manufacturerName": str(self.manufacturerName),
+            "friendlyName": str(self.friendlyName),
+            "description": str(self.description),
+            "displayCategories": [],
+            "cookie": {},
+            "capabilities": getCapabilities()
+        }
+
+    def getCapabilities(self):
+        avaliableCapabilities = ["Alexa.PowerController", "Alexa.Speaker",
+                                 "Alexa.StepSpeaker", "Alexa.PlaybackController",
+                                 "Alexa.InputController", "Alexa.ChannelController"]
+        capabilities = []
+        for capabilitie in self.capabilities:
+            if capabilitie in avaliableCapabilities:
+                capabilities.append(capabilitie)
+            else:
+                raise ValueError('%s is not a valid capabilitie' % capabilitie)
+        return capabilities
+
+    def callback(self):
+        # CODE HERE!!!
+        return
+
+
 def callbackHandler(client, userdata, message):
     try:
         request = message.payload
         logging.info(request)
         if message.topic == 'log':
             printLog(request)
-            return True
+            return
         request = json.loads(request)
         endpointId = request['directive']['endpoint']['endpointId']
 
@@ -48,8 +106,7 @@ def callbackHandler(client, userdata, message):
 
 
 def clearScreen():
-    os.system("clear")
-    return True
+    return os.system("clear")
 
 
 def getTimeStamp():
